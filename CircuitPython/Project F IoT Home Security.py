@@ -2,19 +2,17 @@
 IoT Home Security Alert
 
 Additional libraries, saved into the lib folder.
-  https://circuitpython.org/libraries
-  - adafruit_requests.mpy
-  
+    https://circuitpython.org/libraries
+    - adafruit_requests.mpy
+
 """
 
 import os
 import time
 import board
 import digitalio
-import microcontroller
 import json
 import wifi
-import ipaddress
 import socketpool
 import adafruit_requests
 import ssl

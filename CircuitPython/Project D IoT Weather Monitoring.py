@@ -2,21 +2,19 @@
 Weather Monitoring System with DHT11, LDR and Thingspeak
 
 Additional libraries, saved into the lib folder.
-  https://circuitpython.org/libraries
-  - adafruit_dht.mpy
-  - adafruit_requests.mpy
-  
+    https://circuitpython.org/libraries
+    - adafruit_dht.mpy
+    - adafruit_requests.mpy
+
 """
 
 import os
 import time
 import board
 import analogio
-import digitalio
 import adafruit_dht
 import microcontroller
 import wifi
-import ipaddress
 import socketpool
 import adafruit_requests
 import ssl

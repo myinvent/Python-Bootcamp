@@ -2,10 +2,10 @@
 Smart Home with DHT11, LDR, LEDs and Blynk
 
 Additional libraries, saved into the lib folder.
-  https://circuitpython.org/libraries
-  - adafruit_dht.mpy
-  - adafruit_requests.mpy
-  
+    https://circuitpython.org/libraries
+    - adafruit_dht.mpy
+    - adafruit_requests.mpy
+
 """
 
 import os
@@ -16,7 +16,6 @@ import digitalio
 import adafruit_dht
 import microcontroller
 import wifi
-import ipaddress
 import socketpool
 import adafruit_requests
 import ssl
