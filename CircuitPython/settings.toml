@@ -1,0 +1,19 @@
+# Wi-Fi Details
+WIFI_SSID = "Domiyen"
+WIFI_PASSWORD = "DoMiYen@AAA111"
+
+# Favoriot
+FAVORIOT_HTTP_API = "http://apiv2.favoriot.com/v2/streams"
+FAVORIOT_DEVICE_ACCESS_TOKEN = "VVjOwbip7bMhcRrxjetJjxfdIVQYieq3"
+FAVORIOT_DEVICE_DEVELOPER_ID = "PicoW@ariffinastute"
+
+# Thingspeak
+THINGSPEAK_HTTP_API = "http://api.thingspeak.com/update?"
+THINGSPEAK_WRITE_API_KEY = "IBEELZKZEB7BSFUC"
+THINGSPEAK_READ_API_KEY = ""
+
+# Blynk
+BLYNK_AUTH_TOKEN = "m5u1Hdcn6g6GINgbE6Y5IgFjPzm4GSDB"
+
+#Telegram
+TELEGRAM_BOT_TOKEN = ""
