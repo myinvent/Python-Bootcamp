@@ -12,10 +12,10 @@ import time
 import board
 import digitalio
 import json
+import ssl
 import wifi
 import socketpool
 import adafruit_requests
-import ssl
 
 # Microwave Radar sensor object
 buzzer = digitalio.DigitalInOut(board.GP16)
