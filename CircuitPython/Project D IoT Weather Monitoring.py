@@ -14,10 +14,10 @@ import board
 import analogio
 import adafruit_dht
 import microcontroller
+import ssl
 import wifi
 import socketpool
 import adafruit_requests
-import ssl
 
 # DHT11 sensor object
 dht11 = adafruit_dht.DHT11(board.GP16)
