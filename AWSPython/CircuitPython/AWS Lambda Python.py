@@ -2,11 +2,12 @@ import os
 import time
 import board
 import analogio
+import adafruit_dht
+import microcontroller
 import ssl
 import wifi
 import socketpool
 import adafruit_requests
-import adafruit_dht
 
 # DHT11 sensor object
 dht11 = adafruit_dht.DHT11(board.GP16)
@@ -38,11 +39,8 @@ print("R.Pi Pico W IP Address: {}\n".format(wifi.radio.ipv4_address))
 # Create a socket pool using the wifi radio module
 pool = socketpool.SocketPool(wifi.radio)
 
-# Create a default SSL context
-context = ssl.create_default_context()
-
 # Create an HTTPS session using the socket pool and SSL context
-https = adafruit_requests.Session(pool, context)
+https = adafruit_requests.Session(pool, ssl.create_default_context())
 
 # Function conversion for light sensor from voltage to lux
 def resistance_to_lux (adc):
@@ -55,14 +53,17 @@ def resistance_to_lux (adc):
 while True:
     
     try:
+        # Check if the Wi-Fi disconnected, try to connect again 
         while not wifi.radio.ipv4_address or "0.0.0.0" in repr(wifi.radio.ipv4_address):
             print(f"Connecting to Wi-Fi AP: {ssid} ... ", end="")
             wifi.radio.connect(ssid, password)
             print("connected!")
         
+        # Read temperature and humidity from DHT11
         temperature = dht11.temperature
         humidity = dht11.humidity
         
+        # Read ADC reading and convert to lux from LDR
         ldr_adc = ldr.value
         light = resistance_to_lux(ldr_adc)
         
@@ -88,12 +89,14 @@ while True:
         
         updateInterval = time.monotonic()
         
+        # Sensor's data in JSON
         httpBody = {
             "temperature": str(temperature),
             "humidity": str(humidity),
             "light": str(light)
         }
 
+        # REST request to AWS API Gateway
         response = https.request(
             os.getenv("AWS_HTTPS_METHOD"),
             os.getenv("AWS_HTTPS_API"),
