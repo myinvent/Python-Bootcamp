@@ -1,0 +1,7 @@
+# Wi-Fi Details
+WIFI_SSID = ""
+WIFI_PASSWORD = ""
+
+# AWS
+AWS_HTTPS_API = ""
+AWS_HTTPS_METHOD = "POST"
