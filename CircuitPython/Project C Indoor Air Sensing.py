@@ -5,7 +5,6 @@ Indoor Air Sensing (Temperature & Humidity)
 
 import time
 import board
-import digitalio
 import adafruit_dht
 
 # DHT11 sensor object
