@@ -2,19 +2,16 @@
 WIFI_SSID = ""
 WIFI_PASSWORD = ""
 
-# Favoriot
+# Favoriot Details
 FAVORIOT_HTTP_API = "http://apiv2.favoriot.com/v2/streams"
 FAVORIOT_HTTP_METHOD = "POST"
 FAVORIOT_DEVICE_ACCESS_TOKEN = ""
 FAVORIOT_DEVICE_DEVELOPER_ID = ""
 
-# Thingspeak
+# Thingspeak Details
 THINGSPEAK_HTTP_API = "http://api.thingspeak.com/update?"
 THINGSPEAK_WRITE_API_KEY = ""
 THINGSPEAK_READ_API_KEY = ""
 
-# Blynk
+# Blynk Details
 BLYNK_AUTH_TOKEN = ""
-
-#Telegram
-TELEGRAM_BOT_TOKEN = ""
