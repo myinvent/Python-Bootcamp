@@ -28,7 +28,7 @@ while True:
     if (sensorTimer + 2) < time.monotonic():
         
         sensorTimer = time.monotonic()
-            
+        
         ldr_adc = ldr.value
         light = resistance_to_lux(ldr_adc)
         
