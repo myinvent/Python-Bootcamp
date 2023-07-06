@@ -2,6 +2,6 @@
 WIFI_SSID = ""
 WIFI_PASSWORD = ""
 
-# AWS
+# AWS Details
 AWS_HTTPS_API = ""
 AWS_HTTPS_METHOD = "POST"
