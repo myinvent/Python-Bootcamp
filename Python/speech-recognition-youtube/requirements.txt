@@ -1,0 +1,5 @@
+SpeechRecognition
+pywhatkit
+gTTS
+pydub
+pyaudio
